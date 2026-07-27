@@ -1,0 +1,57 @@
+{
+  "app": {
+    "title": "Mistral Chat",
+    "openSettings": "Abrir configurações"
+  },
+  "sidebar": {
+    "newChat": "Nova conversa",
+    "newCode": "Nova sessão de código",
+    "chatTab": "Conversa",
+    "codeTab": "Código",
+    "deleteConversation": "Excluir conversa",
+    "sync": "Sincronizar conversas"
+  },
+  "chat": {
+    "loading": "Carregando…",
+    "messagePlaceholder": "Mensagem para o Mistral…",
+    "send": "Enviar",
+    "stop": "Parar",
+    "greetingMorning": "Bom dia. Como posso ajudar?",
+    "greetingAfternoon": "Boa tarde. Como posso ajudar?",
+    "greetingEvening": "Boa noite. Como posso ajudar?",
+    "greetingNight": "Ainda acordado? Como posso ajudar?"
+  },
+  "message": {
+    "roleUser": "Você",
+    "roleAssistant": "Mistral",
+    "roleSystem": "Sistema",
+    "toolRunning": "Executando {{name}}…",
+    "toolDone": "{{name}} executado",
+    "copy": "Copiar",
+    "regenerate": "Gerar novamente"
+  },
+  "conversation": {
+    "rename": "Renomear",
+    "delete": "Excluir",
+    "systemPrompt": "Prompt do sistema",
+    "systemPromptPlaceholder": "Instruções personalizadas para esta conversa…"
+  },
+  "settings": {
+    "title": "Configurações",
+    "close": "Fechar",
+    "loading": "Carregando…",
+    "apiKeyLabel": "Chave de API do Mistral",
+    "apiKeyPlaceholder": "Digite a chave de API",
+    "save": "Salvar",
+    "clear": "Limpar",
+    "statusSet": "Chave salva",
+    "statusUnset": "Não definida",
+    "statusUnavailable": "O armazenamento seguro de chaves não está disponível neste sistema — instale/ative o chaveiro do sistema.",
+    "defaultModel": "Modelo padrão",
+    "defaultTemperature": "Temperatura padrão ({{value}})",
+    "defaultSystemPrompt": "Prompt de sistema padrão",
+    "language": "Idioma",
+    "about": "Sobre",
+    "aboutDisclaimer": "Mistral Chat é um cliente de desktop não oficial e de código aberto. Não é afiliado, endossado ou patrocinado pela Mistral AI."
+  }
+}

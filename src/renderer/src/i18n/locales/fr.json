@@ -1,0 +1,57 @@
+{
+  "app": {
+    "title": "Mistral Chat",
+    "openSettings": "Ouvrir les paramètres"
+  },
+  "sidebar": {
+    "newChat": "Nouvelle discussion",
+    "newCode": "Nouvelle session de code",
+    "chatTab": "Discussion",
+    "codeTab": "Code",
+    "deleteConversation": "Supprimer la conversation",
+    "sync": "Synchroniser les conversations"
+  },
+  "chat": {
+    "loading": "Chargement…",
+    "messagePlaceholder": "Écrire à Mistral…",
+    "send": "Envoyer",
+    "stop": "Arrêter",
+    "greetingMorning": "Bonjour. En quoi puis-je aider ?",
+    "greetingAfternoon": "Bon après-midi. En quoi puis-je aider ?",
+    "greetingEvening": "Bonsoir. En quoi puis-je aider ?",
+    "greetingNight": "Encore réveillé ? En quoi puis-je aider ?"
+  },
+  "message": {
+    "roleUser": "Vous",
+    "roleAssistant": "Mistral",
+    "roleSystem": "Système",
+    "toolRunning": "Exécution de {{name}}…",
+    "toolDone": "{{name}} exécuté",
+    "copy": "Copier",
+    "regenerate": "Régénérer la réponse"
+  },
+  "conversation": {
+    "rename": "Renommer",
+    "delete": "Supprimer",
+    "systemPrompt": "Invite système",
+    "systemPromptPlaceholder": "Instructions personnalisées pour cette conversation…"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "close": "Fermer",
+    "loading": "Chargement…",
+    "apiKeyLabel": "Clé API Mistral",
+    "apiKeyPlaceholder": "Entrez la clé API",
+    "save": "Enregistrer",
+    "clear": "Effacer",
+    "statusSet": "Clé enregistrée",
+    "statusUnset": "Non définie",
+    "statusUnavailable": "Le stockage sécurisé des clés n'est pas disponible sur ce système — installez/activez votre trousseau de bureau.",
+    "defaultModel": "Modèle par défaut",
+    "defaultTemperature": "Température par défaut ({{value}})",
+    "defaultSystemPrompt": "Invite système par défaut",
+    "language": "Langue",
+    "about": "À propos",
+    "aboutDisclaimer": "Mistral Chat est un client de bureau non officiel et open source. N'est ni affilié à, ni approuvé ou parrainé par Mistral AI."
+  }
+}

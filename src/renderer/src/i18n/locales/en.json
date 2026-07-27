@@ -1,0 +1,57 @@
+{
+  "app": {
+    "title": "Mistral Chat",
+    "openSettings": "Open settings"
+  },
+  "sidebar": {
+    "newChat": "New Chat",
+    "newCode": "New Code Session",
+    "chatTab": "Chat",
+    "codeTab": "Code",
+    "deleteConversation": "Delete conversation",
+    "sync": "Sync conversations"
+  },
+  "chat": {
+    "loading": "Loading…",
+    "messagePlaceholder": "Message Mistral…",
+    "send": "Send",
+    "stop": "Stop",
+    "greetingMorning": "Good morning. What can I help with?",
+    "greetingAfternoon": "Good afternoon. What can I help with?",
+    "greetingEvening": "Good evening. What can I help with?",
+    "greetingNight": "Still up? What can I help with?"
+  },
+  "message": {
+    "roleUser": "You",
+    "roleAssistant": "Mistral",
+    "roleSystem": "System",
+    "toolRunning": "Running {{name}}…",
+    "toolDone": "Ran {{name}}",
+    "copy": "Copy",
+    "regenerate": "Regenerate response"
+  },
+  "conversation": {
+    "rename": "Rename",
+    "delete": "Delete",
+    "systemPrompt": "System Prompt",
+    "systemPromptPlaceholder": "Custom instructions for this conversation…"
+  },
+  "settings": {
+    "title": "Settings",
+    "close": "Close",
+    "loading": "Loading…",
+    "apiKeyLabel": "Mistral API Key",
+    "apiKeyPlaceholder": "Enter API key",
+    "save": "Save",
+    "clear": "Clear",
+    "statusSet": "Key saved",
+    "statusUnset": "Not set",
+    "statusUnavailable": "Secure key storage isn't available on this system — install/enable your desktop keyring.",
+    "defaultModel": "Default Model",
+    "defaultTemperature": "Default Temperature ({{value}})",
+    "defaultSystemPrompt": "Default System Prompt",
+    "language": "Language",
+    "about": "About",
+    "aboutDisclaimer": "Mistral Chat is an unofficial, open-source desktop client. Not affiliated with, endorsed by, or sponsored by Mistral AI."
+  }
+}

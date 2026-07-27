@@ -1,0 +1,57 @@
+{
+  "app": {
+    "title": "Mistral Chat",
+    "openSettings": "Apri impostazioni"
+  },
+  "sidebar": {
+    "newChat": "Nuova chat",
+    "newCode": "Nuova sessione di codice",
+    "chatTab": "Chat",
+    "codeTab": "Codice",
+    "deleteConversation": "Elimina conversazione",
+    "sync": "Sincronizza conversazioni"
+  },
+  "chat": {
+    "loading": "Caricamento…",
+    "messagePlaceholder": "Scrivi a Mistral…",
+    "send": "Invia",
+    "stop": "Interrompi",
+    "greetingMorning": "Buongiorno. Come posso aiutarti?",
+    "greetingAfternoon": "Buon pomeriggio. Come posso aiutarti?",
+    "greetingEvening": "Buonasera. Come posso aiutarti?",
+    "greetingNight": "Ancora sveglio? Come posso aiutarti?"
+  },
+  "message": {
+    "roleUser": "Tu",
+    "roleAssistant": "Mistral",
+    "roleSystem": "Sistema",
+    "toolRunning": "Esecuzione di {{name}}…",
+    "toolDone": "{{name}} eseguito",
+    "copy": "Copia",
+    "regenerate": "Rigenera risposta"
+  },
+  "conversation": {
+    "rename": "Rinomina",
+    "delete": "Elimina",
+    "systemPrompt": "Prompt di sistema",
+    "systemPromptPlaceholder": "Istruzioni personalizzate per questa conversazione…"
+  },
+  "settings": {
+    "title": "Impostazioni",
+    "close": "Chiudi",
+    "loading": "Caricamento…",
+    "apiKeyLabel": "Chiave API Mistral",
+    "apiKeyPlaceholder": "Inserisci la chiave API",
+    "save": "Salva",
+    "clear": "Cancella",
+    "statusSet": "Chiave salvata",
+    "statusUnset": "Non impostata",
+    "statusUnavailable": "L'archiviazione sicura delle chiavi non è disponibile su questo sistema — installa/attiva il portachiavi del sistema.",
+    "defaultModel": "Modello predefinito",
+    "defaultTemperature": "Temperatura predefinita ({{value}})",
+    "defaultSystemPrompt": "Prompt di sistema predefinito",
+    "language": "Lingua",
+    "about": "Informazioni",
+    "aboutDisclaimer": "Mistral Chat è un client desktop non ufficiale e open source. Non è affiliato, approvato o sponsorizzato da Mistral AI."
+  }
+}

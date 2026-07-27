@@ -1,0 +1,57 @@
+{
+  "app": {
+    "title": "Mistral Chat",
+    "openSettings": "Abrir configuración"
+  },
+  "sidebar": {
+    "newChat": "Nuevo chat",
+    "newCode": "Nueva sesión de código",
+    "chatTab": "Chat",
+    "codeTab": "Código",
+    "deleteConversation": "Eliminar conversación",
+    "sync": "Sincronizar conversaciones"
+  },
+  "chat": {
+    "loading": "Cargando…",
+    "messagePlaceholder": "Escribe a Mistral…",
+    "send": "Enviar",
+    "stop": "Detener",
+    "greetingMorning": "Buenos días. ¿En qué puedo ayudarte?",
+    "greetingAfternoon": "Buenas tardes. ¿En qué puedo ayudarte?",
+    "greetingEvening": "Buenas noches. ¿En qué puedo ayudarte?",
+    "greetingNight": "¿Sigues despierto? ¿En qué puedo ayudarte?"
+  },
+  "message": {
+    "roleUser": "Tú",
+    "roleAssistant": "Mistral",
+    "roleSystem": "Sistema",
+    "toolRunning": "Ejecutando {{name}}…",
+    "toolDone": "{{name}} ejecutado",
+    "copy": "Copiar",
+    "regenerate": "Regenerar respuesta"
+  },
+  "conversation": {
+    "rename": "Renombrar",
+    "delete": "Eliminar",
+    "systemPrompt": "Prompt de sistema",
+    "systemPromptPlaceholder": "Instrucciones personalizadas para esta conversación…"
+  },
+  "settings": {
+    "title": "Configuración",
+    "close": "Cerrar",
+    "loading": "Cargando…",
+    "apiKeyLabel": "Clave de API de Mistral",
+    "apiKeyPlaceholder": "Introduce la clave de API",
+    "save": "Guardar",
+    "clear": "Borrar",
+    "statusSet": "Clave guardada",
+    "statusUnset": "No configurada",
+    "statusUnavailable": "El almacenamiento seguro de claves no está disponible en este sistema — instala/activa tu llavero del escritorio.",
+    "defaultModel": "Modelo predeterminado",
+    "defaultTemperature": "Temperatura predeterminada ({{value}})",
+    "defaultSystemPrompt": "Prompt de sistema predeterminado",
+    "language": "Idioma",
+    "about": "Acerca de",
+    "aboutDisclaimer": "Mistral Chat es un cliente de escritorio no oficial y de código abierto. No está afiliado ni respaldado ni patrocinado por Mistral AI."
+  }
+}
