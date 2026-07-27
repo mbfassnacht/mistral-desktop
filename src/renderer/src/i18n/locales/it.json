@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Mistral Chat",
+    "title": "Mistral Desktop",
     "openSettings": "Apri impostazioni"
   },
   "sidebar": {
@@ -52,6 +52,6 @@
     "defaultSystemPrompt": "Prompt di sistema predefinito",
     "language": "Lingua",
     "about": "Informazioni",
-    "aboutDisclaimer": "Mistral Chat è un client desktop non ufficiale e open source. Non è affiliato, approvato o sponsorizzato da Mistral AI."
+    "aboutDisclaimer": "Mistral Desktop è un client desktop non ufficiale e open source. Non è affiliato, approvato o sponsorizzato da Mistral AI."
   }
 }

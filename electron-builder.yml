@@ -1,5 +1,5 @@
 appId: com.mistralapp.desktop
-productName: Mistral Chat
+productName: Mistral Desktop
 directories:
   buildResources: build
 files:
@@ -32,7 +32,7 @@ linux:
   target:
     - AppImage
     - deb
-  maintainer: Mistral Chat
+  maintainer: Mistral Desktop
   category: Utility
 appImage:
   artifactName: ${productName}-${version}.${ext}

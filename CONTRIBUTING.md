@@ -1,4 +1,4 @@
-# Contributing to Mistral Chat
+# Contributing to Mistral Desktop
 
 Thanks for your interest. A reminder before you dive in: **this is an
 unofficial, community-maintained project, not a Mistral AI product.**
