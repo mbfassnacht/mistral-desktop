@@ -8,8 +8,8 @@ or marketing language that implies Mistral AI involvement or endorsement.
 ## Getting set up
 
 ```bash
-git clone git@github.com:mbfassnacht/mistral-desktop-app.git
-cd mistral-desktop-app
+git clone git@github.com:mbfassnacht/mistral-desktop.git
+cd mistral-desktop
 pnpm install
 pnpm run dev
 ```
@@ -64,9 +64,5 @@ fix).
 
 ## License
 
-This repository does not yet have a license file, which means it isn't
-formally open source yet even though the code is public — no license means
-no one else has explicit permission to reuse, modify, or redistribute it.
-If you want to contribute code, raise this in an issue first so the
-maintainer can pick and add one; it's better to resolve before, not after,
-accepting outside contributions.
+MIT — see [LICENSE](LICENSE). By contributing, you agree your changes are
+licensed under the same terms.

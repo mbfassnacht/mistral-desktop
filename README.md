@@ -1,4 +1,4 @@
-# mistral-desktop-app
+# mistral-desktop
 
 A free, open-source desktop chat client for [Mistral AI](https://mistral.ai), built with Electron.
 
@@ -7,7 +7,7 @@ A free, open-source desktop chat client for [Mistral AI](https://mistral.ai), bu
 > trademarks of Mistral AI; they're used here under Mistral's public brand
 > guidelines, purely to identify which service this app talks to.
 
-**[⬇ Download the latest release](https://github.com/mbfassnacht/mistral-desktop-app/releases/latest)**
+**[⬇ Download the latest release](https://github.com/mbfassnacht/mistral-desktop/releases/latest)**
 for macOS, Windows, or Linux.
 
 |                    Chat                     |                             Code mode                             |
@@ -17,7 +17,7 @@ for macOS, Windows, or Linux.
 ## Download
 
 Prebuilt binaries for macOS, Windows, and Linux are published on the
-[Releases page](https://github.com/mbfassnacht/mistral-desktop-app/releases/latest).
+[Releases page](https://github.com/mbfassnacht/mistral-desktop/releases/latest).
 Builds are unsigned, so your OS will show a one-time warning on first launch
 (no Apple/Microsoft notarization — see [Contributing](CONTRIBUTING.md) for why).
 
@@ -76,8 +76,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-No license has been chosen for this project yet — until one is added, all
-rights are reserved by default and the usual open-source permissions
-(modification, redistribution) don't formally apply, even though the source
-is public. This should be resolved before treating the project as truly
-"open source"; see [CONTRIBUTING.md](CONTRIBUTING.md).
+[MIT](LICENSE)
