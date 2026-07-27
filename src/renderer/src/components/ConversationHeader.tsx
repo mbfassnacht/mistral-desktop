@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useChat } from '../state/ChatContext'
+import { useChat } from '../state/useChat'
 
 function ConversationHeader(): React.JSX.Element | null {
   const { t } = useTranslation()

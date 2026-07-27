@@ -52,8 +52,8 @@ const api = {
     list: (): Promise<ConversationSummary[]> => ipcRenderer.invoke(IPC.CONVERSATIONS_LIST),
     sync: (): Promise<ConversationSummary[]> => ipcRenderer.invoke(IPC.CONVERSATIONS_SYNC),
     get: (id: string): Promise<Conversation> => ipcRenderer.invoke(IPC.CONVERSATIONS_GET, id),
-    create: (mode: ConversationMode): Promise<Conversation> =>
-      ipcRenderer.invoke(IPC.CONVERSATIONS_CREATE, mode),
+    create: (mode: ConversationMode, title: string): Promise<Conversation> =>
+      ipcRenderer.invoke(IPC.CONVERSATIONS_CREATE, mode, title),
     delete: (id: string): Promise<void> => ipcRenderer.invoke(IPC.CONVERSATIONS_DELETE, id),
     update: (
       id: string,

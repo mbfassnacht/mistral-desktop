@@ -4,7 +4,7 @@ import type { Message } from '@shared/types'
 import MessageList from './MessageList'
 import MessageInput from './MessageInput'
 import ConversationHeader from './ConversationHeader'
-import { useChat } from '../state/ChatContext'
+import { useChat } from '../state/useChat'
 import { greetingKey } from '../greeting'
 import mistralIcon from '../assets/mistral-icon-gradient.svg'
 

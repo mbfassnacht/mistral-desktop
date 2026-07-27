@@ -50,12 +50,15 @@ export async function getConversation(id: string): Promise<Conversation> {
   return { ...conversation, mode: conversation.mode ?? 'chat' } as Conversation
 }
 
-export async function createConversation(mode: ConversationMode = 'chat'): Promise<Conversation> {
+export async function createConversation(
+  mode: ConversationMode = 'chat',
+  title: string
+): Promise<Conversation> {
   const settings = await getSettings()
   const now = Date.now()
   const conversation: Conversation = {
     id: randomUUID(),
-    title: mode === 'code' ? 'New Code Session' : 'New Chat',
+    title,
     model: settings.defaultModel,
     mode,
     temperature: settings.defaultTemperature,

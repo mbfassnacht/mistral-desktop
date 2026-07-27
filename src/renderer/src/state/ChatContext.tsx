@@ -1,23 +1,12 @@
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useReducer,
-  useRef,
-  type ReactNode,
-  type JSX
-} from 'react'
-import type { Conversation, ConversationMode, ConversationSummary, ToolExecutionRecord } from '@shared/types'
-
-interface ChatState {
-  conversations: ConversationSummary[]
-  activeConversation: Conversation | null
-  activeMode: ConversationMode
-  streamingContent: string | null
-  toolExecutions: ToolExecutionRecord[]
-  activeRequestId: string | null
-  error: string | null
-}
+import { useEffect, useReducer, useRef, type ReactNode, type JSX } from 'react'
+import { useTranslation } from 'react-i18next'
+import type {
+  Conversation,
+  ConversationMode,
+  ConversationSummary,
+  ToolExecutionRecord
+} from '@shared/types'
+import { ChatContext, type ChatState } from './context'
 
 type Action =
   | { type: 'conversations/loaded'; conversations: ConversationSummary[] }
@@ -189,25 +178,34 @@ function reducer(state: ChatState, action: Action): ChatState {
   }
 }
 
-interface ChatContextValue extends ChatState {
-  selectConversation: (id: string) => Promise<void>
-  newConversation: (mode: ConversationMode) => Promise<void>
-  selectTab: (mode: ConversationMode) => Promise<void>
-  syncConversations: () => Promise<void>
-  deleteConversationById: (id: string) => Promise<void>
-  updateConversationSettings: (
-    partial: Partial<Pick<Conversation, 'title' | 'model' | 'temperature' | 'systemPrompt'>>
-  ) => Promise<void>
-  sendMessage: (text: string) => void
-  regenerateLastResponse: () => void
-  stopStreaming: () => void
-}
-
-const ChatContext = createContext<ChatContextValue | null>(null)
-
 export function ChatProvider({ children }: { children: ReactNode }): JSX.Element {
   const [state, dispatch] = useReducer(reducer, initialState)
   const initStarted = useRef(false)
+  const { t } = useTranslation()
+
+  // The main process persists conversations but has no i18n of its own -
+  // the renderer is the only place that knows the user's language, so the
+  // default title has to be produced here and passed down rather than
+  // hardcoded on the main-process side.
+  function defaultTitle(mode: ConversationMode): string {
+    return mode === 'code' ? t('sidebar.newCode') : t('sidebar.newChat')
+  }
+
+  async function init(): Promise<void> {
+    // sync() opportunistically pulls in Code-mode conversations started on
+    // other devices under the same API key before returning the list, so
+    // they show up without the user having to do anything.
+    let conversations = await window.api.conversations.sync()
+    if (conversations.length === 0) {
+      await window.api.conversations.create('chat', defaultTitle('chat'))
+      conversations = await window.api.conversations.list()
+    }
+    dispatch({ type: 'conversations/loaded', conversations })
+    if (conversations[0]) {
+      const conversation = await window.api.conversations.get(conversations[0].id)
+      dispatch({ type: 'conversation/loaded', conversation })
+    }
+  }
 
   useEffect(() => {
     const offToken = window.api.chat.onToken(({ requestId, delta }) =>
@@ -248,29 +246,13 @@ export function ChatProvider({ children }: { children: ReactNode }): JSX.Element
     }
   }, [])
 
-  async function init(): Promise<void> {
-    // sync() opportunistically pulls in Code-mode conversations started on
-    // other devices under the same API key before returning the list, so
-    // they show up without the user having to do anything.
-    let conversations = await window.api.conversations.sync()
-    if (conversations.length === 0) {
-      await window.api.conversations.create('chat')
-      conversations = await window.api.conversations.list()
-    }
-    dispatch({ type: 'conversations/loaded', conversations })
-    if (conversations[0]) {
-      const conversation = await window.api.conversations.get(conversations[0].id)
-      dispatch({ type: 'conversation/loaded', conversation })
-    }
-  }
-
   async function selectConversation(id: string): Promise<void> {
     const conversation = await window.api.conversations.get(id)
     dispatch({ type: 'conversation/loaded', conversation })
   }
 
   async function newConversation(mode: ConversationMode): Promise<void> {
-    const conversation = await window.api.conversations.create(mode)
+    const conversation = await window.api.conversations.create(mode, defaultTitle(mode))
     const conversations = await window.api.conversations.list()
     dispatch({ type: 'conversations/loaded', conversations })
     dispatch({ type: 'conversation/loaded', conversation })
@@ -302,7 +284,7 @@ export function ChatProvider({ children }: { children: ReactNode }): JSX.Element
     let conversations = await window.api.conversations.list()
     if (conversations.length === 0) {
       // Never leave the user with no conversation to type into.
-      await window.api.conversations.create(mode)
+      await window.api.conversations.create(mode, defaultTitle(mode))
       conversations = await window.api.conversations.list()
     }
     dispatch({ type: 'conversations/loaded', conversations })
@@ -319,10 +301,7 @@ export function ChatProvider({ children }: { children: ReactNode }): JSX.Element
     partial: Partial<Pick<Conversation, 'title' | 'model' | 'temperature' | 'systemPrompt'>>
   ): Promise<void> {
     if (!state.activeConversation) return
-    const conversation = await window.api.conversations.update(
-      state.activeConversation.id,
-      partial
-    )
+    const conversation = await window.api.conversations.update(state.activeConversation.id, partial)
     dispatch({ type: 'conversation/updated', conversation })
   }
 
@@ -371,10 +350,4 @@ export function ChatProvider({ children }: { children: ReactNode }): JSX.Element
       {children}
     </ChatContext.Provider>
   )
-}
-
-export function useChat(): ChatContextValue {
-  const ctx = useContext(ChatContext)
-  if (!ctx) throw new Error('useChat must be used within a ChatProvider')
-  return ctx
 }

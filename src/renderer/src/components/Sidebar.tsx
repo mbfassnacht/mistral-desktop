@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useChat } from '../state/ChatContext'
+import { useChat } from '../state/useChat'
 import mistralIconWhite from '../assets/mistral-icon-white.svg'
 
 interface Props {
